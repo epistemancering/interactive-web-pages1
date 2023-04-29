@@ -1,4 +1,4 @@
-var message = document.querySelector('#message')
+let message = document.querySelector('#message')
 console.log('hello world')
 function addMovie(event) {
     event.preventDefault()
@@ -16,8 +16,8 @@ function addMovie(event) {
     inputField.value = ''
 }
 function deleteMovie(event) {
-    event.target.parentNode.remove()
     message.textContent = event.target.parentNode.children[0].textContent + ' deleted!'
+    event.target.parentNode.remove()
     revealMessage()
 }
 function crossOffMovie(event) {
